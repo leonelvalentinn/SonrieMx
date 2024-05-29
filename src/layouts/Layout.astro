@@ -1,18 +1,28 @@
 ---
 interface Props {
-	title: string;
+	title: string
+	description: string
 }
 
-const { title } = Astro.props;
+const { title, description } = Astro.props
+const url = ''
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
+		<meta name="author" content="Leonel Valentín">
+		<meta name="keywords" content="">
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="shortcut icon" href="/favicon.svg" type="image/x-icon">
+		<meta name="description" content={description} />
+		<!-- open graph -->
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={url} />
+		<meta property="og:image" content="" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
@@ -21,31 +31,38 @@ const { title } = Astro.props;
 	</body>
 </html>
 <style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	}
+	@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;&display=swap');
+
+	@font-face {
+    font-family: 'Lambency';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(/src/fonts/LambencyRegular-eZLZe.ttf) format('woff2');
+  }
+
+	@font-face {
+    font-family: 'Emotional';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(/src/fonts/EmotionalRescuePersonalUseRegular-PKY87.ttf) format('woff2');
+  }
+
+	@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-display: swap;
+		src: url(/src/fonts/Roboto-Regular.ttf) format('woff2');
+  }
+
 	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-		background-size: 224px;
+  	font-family: "Roboto", sans-serif;
+		background: #1d1d1d;
+		color: white;
+		scroll-behavior: smooth;
 	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	}
+	.text-gold {
+    -webkit-text-fill-color: transparent;
+  }
 </style>

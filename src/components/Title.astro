@@ -1,0 +1,18 @@
+---
+interface Props {
+  as: string
+  span: string
+  before?: string
+  after?: string
+}
+
+const { as, span, before, after } = Astro.props
+---
+
+<h1 class="text-5xl uppercase font-bold tracking-widest">
+  {before}
+  <span class="bg-gradient-to-r from-amber-200 to-yellow-500 bg-clip-text fill-transparent text-gold font-[Lambency]">
+    {span}
+  </span>
+  {after}
+</h1>

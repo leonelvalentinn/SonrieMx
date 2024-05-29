@@ -1,0 +1,27 @@
+---
+import ButtonArrow from "./ButtonArrow.astro";
+import Dental from "./icons/Dental.astro";
+---
+
+<section class="w-full px-4 grid gap-4">
+  <article class="grid gap-2">
+    <h2 class="text-4xl uppercase font-bold">Acerca de <span class="pr-2 bg-gradient-to-r from-amber-200 to-yellow-500 bg-clip-text fill-transparent text-gold font-[Lambency]">nosotros</span></h2>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti asperiores accusamus libero ut, at atque, nihil ea porro dolor quis quibusdam culpa sit earum quod blanditiis cumque? Pariatur, esse laudantium.</p>
+    <ul>
+      <li>Fast</li>
+      <li>Fourios</li>
+      <li>Poyo asado</li>
+    </ul>
+    <ButtonArrow content="Conoce más" />
+  </article>
+  <div class="w-full relative">
+    <img src="/images/paciente.webp" alt="Paciente realizando una revisión" class="rounded-[19px] aspect-square w-11/12 object-cover">
+    <div class="rounded-xl bg-yellow-500 flex gap-3 w-max px-2 py-1 absolute top-10 right-0">
+      <Dental class="w-8 text-slate-900" />
+      <p class="flex flex-col text-slate-900">
+        <span class="font-semibold text-xl">100 +</span>
+        <small class="text-xs">Best Doctor</small>
+      </p>
+    </div>
+  </div>
+</section>

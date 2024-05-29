@@ -1,0 +1,26 @@
+---
+import ButtonArrow from "./ButtonArrow.astro";
+---
+
+<section class="px-4 w-full grid max-w-7xl gap-4 mb-10 mt-5">
+  <h1 class="text-5xl uppercase font-bold tracking-widest"><span class="pr-2 bg-gradient-to-r from-amber-200 to-yellow-500 bg-clip-text fill-transparent text-gold font-[Lambency]">Sonríe</span> con nosotros</h1>
+  <div class="grid gap-2">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque repellendus maxime fuga aut odit, dignissimos repellat obcaecati magni laudantium magnam doloribus omnis? Corrupti explicabo perferendis saepe sit! Excepturi, asperiores accusantium!</p>
+    <ButtonArrow content="Agenda tu cita" />
+  </div>
+  <div class="relative">
+    <img src="/images/hero-1.webp" alt="Paciente realizandose un blanqueamiento dental" class="rounded-[19px] aspect-[14/9] object-cover">
+    <span class="absolute bottom-0 w-full py-2 rounded-b-[19px] bg-slate-600/50 mask-image pl-4">Consigue la sonrísa que soñaste</span>
+  </div>
+  <div class="relative">
+    <img src="/images/hero-2.webp" alt="Persona cepillandose los dientes" class="rounded-[19px] aspect-[14/9] object-cover">
+    <span class="absolute bottom-0 w-full py-2 rounded-b-[19px] bg-slate-600/50 mask-image pl-4">Consigue la sonrísa que soñaste</span>
+  </div>
+</section>
+
+<style>
+  .mask-image {
+    mask-image: linear-gradient(to top, #000 75%, #0000 100%);
+    -webkit-mask-image: linear-gradient(to top, #000 75%, #0000 100%);
+  }
+</style>

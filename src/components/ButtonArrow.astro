@@ -1,0 +1,14 @@
+---
+import Arrow from "./icons/Arrow.astro"
+
+interface Props {
+  content: string
+}
+
+const { content } = Astro.props
+---
+
+<a href="http://" target="_blank" rel="noopener noreferrer" class="flex w-max text-black items-center gap-2 px-4 py-3 rounded-full bg-yellow-500 group transition hover:scale-105">
+  {content}
+  <Arrow class="w-5 -rotate-45 transition group-hover:rotate-0" />
+</a>
