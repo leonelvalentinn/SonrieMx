@@ -5,24 +5,35 @@ import Facebook from "./icons/Facebook.astro"
 import Instagram from "./icons/Instagram.astro"
 ---
 
-<header class="w-full flex justify-center items-start">
-  <nav class="w-full flex justify-between items-center max-w-7xl px-4 py-2">
+<header class="w-full flex justify-center items-start md:mb-10">
+  <nav class="w-full flex justify-between items-center max-w-7xl px-4 py-2 lg:py-3">
     <a href="/" class="flex w-48">
       <img width="1114" height="1030" src="/logo-gold.webp" alt="Logo de Sonríe MX en color dorado" class="w-full aspect-auto">
     </a>
-    <button class="" aria-label="Abrir menu desplegable" id="open-menu">
+    <button class="lg:hidden" aria-label="Abrir menu desplegable" id="open-menu">
       <Menu class="w-10" />
     </button>
-    <div class="w-full h-svh fixed top-0 right-0 transition scale-x-0 origin-right duration-300 z-10" id="menu-dropdown">
-      <div class="w-11/12 h-svh bg-black/90 absolute top-0 right-0 flex flex-col justify-center items-start gap-6 pt-14 px-6 pb-6">
-        <button class="absolute top-10 right-10">
-          <Close class="w-8" />
+    <div class="w-full h-svh fixed top-0 right-0 transition scale-x-0 origin-right duration-300 z-10 lg:scale-x-100 lg:h-auto lg:relative" id="menu-dropdown">
+      <div
+        class=`w-11/12 h-svh bg-[#1d1d1d]/[0.99] absolute top-0 right-0 flex flex-col justify-center items-start gap-6 pt-14 px-6 pb-6 
+              lg:w-full lg:relative lg:h-auto lg:bg-transparent lg:flex-row lg:px-0 lg:pb-0 lg:pt-0 lg:justify-end`
+      >
+        <button class="absolute top-10 right-10 group lg:hidden">
+          <Close class="w-8 transition group-hover:text-red-500" />
         </button>
-        <a href="/" class="font-semibold text-2xl">Inicio</a>
-        <a href="#Nosotros" class="font-semibold text-2xl">Nosotros</a>
-        <a href="#Servicios" class="font-semibold text-2xl">Servicios</a>
-        <a href="tel:5555555555" class="font-semibold text-2xl">Contacto</a>
-        <div class="flex gap-4">
+        <a href="/" class="font-semibold text-2xl tracking-wider group lg:font-medium">Inicio
+          <div class="w-0 h-[2px] rounded-full bg-white transition-all group-hover:w-full" />
+        </a>
+        <a href="#nosotros" class="font-semibold text-2xl tracking-wider group lg:font-medium">Nosotros
+          <div class="w-0 h-[2px] rounded-full bg-white transition-all group-hover:w-full" />
+        </a>
+        <a href="#servicios" class="font-semibold text-2xl tracking-wider group lg:font-medium">Servicios
+          <div class="w-0 h-[2px] rounded-full bg-white transition-all group-hover:w-full" />
+        </a>
+        <a href="tel:5555555555" class="font-semibold text-2xl tracking-wider group lg:font-medium">Contacto
+          <div class="w-0 h-[2px] rounded-full bg-white transition-all group-hover:w-full" />
+        </a>
+        <div class="flex gap-4 lg:hidden">
           <a href="http://" target="_blank" rel="noopener noreferrer">
             <Facebook class="w-8 fill-white" />
           </a>

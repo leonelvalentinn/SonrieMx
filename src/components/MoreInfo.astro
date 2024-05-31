@@ -3,14 +3,14 @@ import ButtonArrow from "./ButtonArrow.astro";
 import Check from "./icons/Check.astro";
 ---
 
-<section class="w-full px-4 grid gap-4">
-  <article class="grid gap-2">
-    <h2 class="text-4xl uppercase font-bold">Cuidamos tu <span class="pr-2 bg-gradient-to-r from-amber-200 to-yellow-500 bg-clip-text fill-transparent text-gold font-[Lambency]">salud</span> dental</h2>
+<section class="w-full max-w-6xl px-4 grid gap-4 md:my-20 md:grid-cols-2">
+  <article class="grid gap-2 lg:max-w-lg">
+    <h2 class="text-4xl uppercase font-bold lg:text-6xl">Cuidamos tu <span class="pr-2 bg-gradient-to-r from-amber-200 to-yellow-500 bg-clip-text fill-transparent text-gold font-[Lambency]">salud</span> dental</h2>
     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti asperiores accusamus libero ut, at atque, nihil ea porro dolor quis quibusdam culpa sit earum quod blanditiis cumque? Pariatur, esse laudantium.</p>
     <ButtonArrow content="Agenda ahora" />
   </article>
   <div class="w-full flex justify-end relative">
-    <img src="/images/paciente.webp" alt="Paciente realizando una revisión" class="rounded-[19px] aspect-square w-11/12 object-cover">
+    <img src="/images/paciente.webp" alt="Paciente realizando una revisión" class="rounded-[19px] aspect-square w-11/12 object-cover lg:max-h-80">
     <div class="items-center rounded-xl bg-yellow-500 flex gap-3 w-max px-2 py-1 absolute bottom-10 left-0">
       <span class="w-max h-max p-2 rounded-full bg-slate-900">
         <Check class="w-6 h-6 text-yellow-500" />

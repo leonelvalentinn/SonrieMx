@@ -4,14 +4,14 @@ import "@splidejs/splide/css";
 import Next from "./icons/Next.astro";
 ---
 
-<section class="w-full max-w-7xl grid gap-4 px-4 my-10">
-  <h2 class="w-full text-4xl uppercase font-bold">
+<section class="w-full max-w-6xl grid gap-4 px-4 my-10 lg:gap-8">
+  <h2 class="w-full text-4xl uppercase font-bold lg:text-6xl">
     Conoce a nuestros <span
       class="pr-2 bg-gradient-to-r from-amber-200 to-yellow-500 bg-clip-text fill-transparent text-gold font-[Lambency]"
       >especialistas</span
     >
   </h2>
-  <p>
+  <p class="lg:text-lg">
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ex, voluptates
     earum facere consectetur quaerat nesciunt praesentium quasi minus dicta
     magnam corporis neque ipsum vero provident molestiae, dolores, molestias
@@ -23,16 +23,16 @@ import Next from "./icons/Next.astro";
       class="splide w-full flex flex-col items-center"
       aria-label="Beautiful Images"
     >
-      <div class="splide__track">
-        <ul class="splide__list">
-          <li class="splide__slide">
-            <CardDoctor name="Dr. John Doe" imgSrc="/images/doctor.webp" />
+      <div class="splide__track w-full">
+        <ul class="splide__list w-full">
+          <li class="splide__slide w-full pr-2 group">
+            <CardDoctor name="Dr. John Doe" imgSrc="/images/doctor.webp" className="group-hover:bg-yellow-500" />
           </li>
-          <li class="splide__slide">
-            <CardDoctor name="Dr. John Doe" imgSrc="/images/doctor.webp" />
+          <li class="splide__slide w-full pr-2 group">
+            <CardDoctor name="Dr. John Doe" imgSrc="/images/doctor.webp" className="group-hover:bg-yellow-500" />
           </li>
-          <li class="splide__slide">
-            <CardDoctor name="Dr. John Doe" imgSrc="/images/doctor.webp" />
+          <li class="splide__slide w-full pr-2 group">
+            <CardDoctor name="Dr. John Doe" imgSrc="/images/doctor.webp" className="group-hover:bg-yellow-500" />
           </li>
         </ul>
       </div>
@@ -57,20 +57,18 @@ import Next from "./icons/Next.astro";
   import { Intersection } from "@splidejs/splide-extension-intersection";
   new Splide(".splide", {
     type: "loop",
-    perPage: 3,
+    perPage: 4,
+    focus: 2,
+    slideFocus: true,
     autoplay: "pause",
-    intersection: {
-      inView: {
-        autoplay: true,
-      },
-      outView: {
-        autoplay: false,
-      },
-    },
+    perMove: 1,
     breakpoints: {
       767: {
         perPage: 1,
       },
+      1024: {
+        perPage: 3
+      }
     },
   }).mount({ Intersection });
 </script>
@@ -80,4 +78,12 @@ import Next from "./icons/Next.astro";
   arrow : 'items-center bg-transparent rounded-full cursor-pointer flex h-8 justify-center p-0 absolute top-1/2 -translate-y-1/2 w-8 z-[1] border border-yellow-500',
   prev  : '',
   next  : '',
+      intersection: {
+      inView: {
+        autoplay: true,
+      },
+      outView: {
+        autoplay: false,
+      },
+    },
 }, -->
