@@ -22,7 +22,7 @@ const url = ''
 		<meta property="og:description" content={description} />
 		<meta property="og:type" content="website" />
 		<meta property="og:url" content={url} />
-		<meta property="og:image" content="" />
+		<meta property="og:image" content="https://sonrie-mx.vercel.app/logo-gold.webp" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
@@ -32,30 +32,21 @@ const url = ''
 </html>
 <style is:global>
 	@font-face {
-    font-family: 'Lambency';
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: url(/src/fonts/Salty.otf) format('woff2');
-  }
-
-	@font-face {
-    font-family: 'Emotional';
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: url(/src/fonts/EmotionalRescuePersonalUseRegular-PKY87.ttf) format('woff2');
-  }
-
-	@font-face {
     font-family: 'Ondo';
     font-style: normal;
     font-display: swap;
 		src: url(/src/fonts/Ondo.ttf) format('woff2');
   }
 
+	@font-face {
+    font-family: 'Varela';
+    font-style: normal;
+    font-display: swap;
+		src: url(/src/fonts/Montserrat-Light.ttf) format('woff2');
+  }
+
 	html {
-  	font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  	font-family: 'Varela', system-ui;
 		font-weight: 400;
 		background: #1d1d1d;
 		color: white;
