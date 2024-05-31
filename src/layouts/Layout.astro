@@ -31,14 +31,12 @@ const url = ''
 	</body>
 </html>
 <style is:global>
-	@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;&display=swap');
-
 	@font-face {
     font-family: 'Lambency';
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: url(/src/fonts/LambencyRegular-eZLZe.ttf) format('woff2');
+    src: url(/src/fonts/Salty.otf) format('woff2');
   }
 
 	@font-face {
@@ -50,17 +48,19 @@ const url = ''
   }
 
 	@font-face {
-    font-family: 'Roboto';
+    font-family: 'Ondo';
     font-style: normal;
     font-display: swap;
-		src: url(/src/fonts/Roboto-Regular.ttf) format('woff2');
+		src: url(/src/fonts/Ondo.ttf) format('woff2');
   }
 
 	html {
-  	font-family: "Roboto", sans-serif;
+  	font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+		font-weight: 400;
 		background: #1d1d1d;
 		color: white;
 		scroll-behavior: smooth;
+		min-width: 768px;
 	}
 	.text-gold {
     -webkit-text-fill-color: transparent;
