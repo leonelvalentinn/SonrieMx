@@ -1,42 +1,50 @@
 ---
-import CardDoctor from "./CardDoctor.astro"
-import '@splidejs/splide/css'
-import Prev from "./icons/Prev.astro"
-import Next from "./icons/Next.astro"
+import CardDoctor from "./CardDoctor.astro";
+import "@splidejs/splide/css";
+import Next from "./icons/Next.astro";
 ---
 
 <section class="w-full max-w-7xl grid gap-4 px-4 my-10">
-  <h2 class="text-4xl uppercase font-bold">Conoce a nuestros <span class="pr-2 bg-gradient-to-r from-amber-200 to-yellow-500 bg-clip-text fill-transparent text-gold font-[Lambency]">especialistas</span></h2>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ex, voluptates earum facere consectetur quaerat nesciunt praesentium quasi minus dicta magnam corporis neque ipsum vero provident molestiae, dolores, molestias eius?</p>
-  <div>
-    <section id="image-carousel" class="splide flex flex-col items-center" aria-label="Beautiful Images">
+  <h2 class="w-full text-4xl uppercase font-bold">
+    Conoce a nuestros <span
+      class="pr-2 bg-gradient-to-r from-amber-200 to-yellow-500 bg-clip-text fill-transparent text-gold font-[Lambency]"
+      >especialistas</span
+    >
+  </h2>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ex, voluptates
+    earum facere consectetur quaerat nesciunt praesentium quasi minus dicta
+    magnam corporis neque ipsum vero provident molestiae, dolores, molestias
+    eius?
+  </p>
+  <div class="w-full">
+    <section
+      id="image-carousel"
+      class="splide w-full flex flex-col items-center"
+      aria-label="Beautiful Images"
+    >
       <div class="splide__track">
         <ul class="splide__list">
           <li class="splide__slide">
-            <CardDoctor
-              name="Dr. John Doe"
-              imgSrc="/images/doctor.webp"
-            />
+            <CardDoctor name="Dr. John Doe" imgSrc="/images/doctor.webp" />
           </li>
           <li class="splide__slide">
-            <CardDoctor
-              name="Dr. John Doe"
-              imgSrc="/images/doctor.webp"
-            />
+            <CardDoctor name="Dr. John Doe" imgSrc="/images/doctor.webp" />
           </li>
           <li class="splide__slide">
-            <CardDoctor
-              name="Dr. John Doe"
-              imgSrc="/images/doctor.webp"
-            />
+            <CardDoctor name="Dr. John Doe" imgSrc="/images/doctor.webp" />
           </li>
         </ul>
       </div>
       <div class="splide__arrows w-36 translate-y-10">
-        <button class="splide__arrow--prev items-center bg-transparent rounded-full cursor-pointer flex h-8 justify-center p-0 absolute top-1/2 -translate-y-1/2 w-8 z-[1] border border-yellow-500 transition hover:bg-yellow-500">
+        <button
+          class="splide__arrow--prev items-center bg-transparent rounded-full cursor-pointer flex h-8 justify-center p-0 absolute top-1/2 -translate-y-1/2 w-8 z-[1] border border-yellow-500 transition hover:bg-yellow-500"
+        >
           <Next class="w-8 h-8 rotate-90" />
         </button>
-        <button class="splide__arrow--next items-center bg-transparent rounded-full cursor-pointer flex h-8 justify-center p-0 absolute top-1/2 -translate-y-1/2 w-8 z-[1] border border-yellow-500 transition hover:bg-yellow-500">
+        <button
+          class="splide__arrow--next items-center bg-transparent rounded-full cursor-pointer flex h-8 justify-center p-0 absolute top-1/2 -translate-y-1/2 w-8 z-[1] border border-yellow-500 transition hover:bg-yellow-500"
+        >
           <Next class="w-8 h-8" />
         </button>
       </div>
@@ -45,12 +53,12 @@ import Next from "./icons/Next.astro"
 </section>
 
 <script>
-  import Splide from '@splidejs/splide'
-  import { Intersection } from '@splidejs/splide-extension-intersection'
-  new Splide( '.splide', {
-    type   : 'loop',
+  import Splide from "@splidejs/splide";
+  import { Intersection } from "@splidejs/splide-extension-intersection";
+  new Splide(".splide", {
+    type: "loop",
     perPage: 3,
-    autoplay: 'pause',
+    autoplay: "pause",
     intersection: {
       inView: {
         autoplay: true,
@@ -62,9 +70,9 @@ import Next from "./icons/Next.astro"
     breakpoints: {
       767: {
         perPage: 1,
-      }
-    }
-  } ).mount( { Intersection } )
+      },
+    },
+  }).mount({ Intersection });
 </script>
 
 <!-- classes: {
