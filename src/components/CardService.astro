@@ -4,13 +4,20 @@ interface Props {
   description?: string
   icon?: string
   className?: string
+  imgWidth?: string
+  special?: string
 }
 
-const { title, description, icon, className } = Astro.props
+const { title, description, icon, className, imgWidth, special } = Astro.props
 ---
 
-<a title={`Agendar mi cita para iniciar mi tratamiento de ${title}`} href="/" target="_blank" rel="noopener noreferrer" class={`flex flex-col items-end px-5 rounded-[19px] transition bg-white text-slate-900 ${description ? 'py-5' : 'py-8'} ${className} hover:bg-yellow-500`}>
-  <h3 class={`text-2xl font-bold w-full flex ${description ? 'items-start' : 'justify-center'}`}>{title}</h3>
+<a
+  title={`Agendar mi cita para iniciar mi tratamiento de ${title}`}
+  href={special === 'true' ? 'https://api.whatsapp.com/send?phone=525575069386&text=Solicito información sobre el tratamiento de ' : `https://api.whatsapp.com/send?phone=525575069386&text=Solicito información sobre el tratamiento de ${title}`}
+  target="_blank"
+  rel="noopener noreferrer"
+  class={`flex flex-col items-end px-5 rounded-[19px] transition bg-white text-slate-900 ${description ? 'py-5' : 'py-8'} ${className} hover:bg-yellow-500`}>
+  <h3 class={`font-bold w-full text-nowrap flex ${description ? 'items-start text-2xl ' : 'justify-center'} text-xl`}>{title}</h3>
   {description ? <p class="text-sm mt-4">{description}</p> : ''}
-  {icon ? <img src={icon} alt={`Icono de ${title}`} class="w-1/2 max-w-56" /> : ''}
+  {icon ? <img src={icon} alt={`Icono de ${title}`} class={`w-1/2 aspect-square ${imgWidth ? imgWidth : 'max-w-48'}`} /> : ''}
 </a>

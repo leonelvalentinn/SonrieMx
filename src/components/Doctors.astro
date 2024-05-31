@@ -2,6 +2,7 @@
 import CardDoctor from "./CardDoctor.astro";
 import "@splidejs/splide/css";
 import Next from "./icons/Next.astro";
+import { doctors } from "../mocks/doctors";
 ---
 
 <section class="w-full max-w-6xl grid gap-4 px-4 my-10 lg:gap-8">
@@ -12,10 +13,7 @@ import Next from "./icons/Next.astro";
     >
   </h2>
   <p class="lg:text-lg">
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ex, voluptates
-    earum facere consectetur quaerat nesciunt praesentium quasi minus dicta
-    magnam corporis neque ipsum vero provident molestiae, dolores, molestias
-    eius?
+    Todos nuestros especialistas han egresado de las mejores universidades del país y cuentan con un amplio currículo que los avala como los mejores en cada una de las áreas. Su experiencia y formación continua aseguran que recibas la atención más actualizada y de alta calidad.
   </p>
   <div class="w-full">
     <section
@@ -25,15 +23,17 @@ import Next from "./icons/Next.astro";
     >
       <div class="splide__track w-full">
         <ul class="splide__list w-full">
-          <li class="splide__slide w-full pr-2 group">
-            <CardDoctor name="Dr. John Doe" imgSrc="/images/doctor.webp" className="group-hover:bg-yellow-500" />
-          </li>
-          <li class="splide__slide w-full pr-2 group">
-            <CardDoctor name="Dr. John Doe" imgSrc="/images/doctor.webp" className="group-hover:bg-yellow-500" />
-          </li>
-          <li class="splide__slide w-full pr-2 group">
-            <CardDoctor name="Dr. John Doe" imgSrc="/images/doctor.webp" className="group-hover:bg-yellow-500" />
-          </li>
+          {
+            doctors.map((doctor) => (
+            <li class="splide__slide w-full pr-2 group">
+              <CardDoctor
+                name={doctor.name}
+                imgSrc={doctor.imgSrc}
+                className="group-hover:bg-yellow-500"
+              />
+            </li>
+            ))
+          }
         </ul>
       </div>
       <div class="splide__arrows w-36 translate-y-10">
@@ -58,7 +58,6 @@ import Next from "./icons/Next.astro";
   new Splide(".splide", {
     type: "loop",
     perPage: 4,
-    focus: 2,
     slideFocus: true,
     autoplay: "pause",
     perMove: 1,

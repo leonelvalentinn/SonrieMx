@@ -1,15 +1,23 @@
 ---
 import CardService from "./CardService.astro";
+import { services } from "../mocks/services";
 ---
 
 <section class="w-full grid gap-4 place-content-center max-w-7xl px-4 my-10" id="servicios">
   <h2 class="text-4xl uppercase lg:text-6xl font-[Ondo]">Nuestros 
     <span class="bg-gradient-to-r from-amber-200 to-yellow-500 bg-clip-text fill-transparent text-gold">servicios</span></h2>
   <div class="w-full gap-4 grid place-content-center grid-cols-6">
-    <CardService className="col-span-3" title="Carillas Dentales" description="Ofrecemos un amplio catalogo de carillas para todo uso bla bka bla bla bla bla bla bal" icon="/images/carillas-dentales.webp" />
-    <CardService className="col-span-3" title="Carillas Dentales" description="Ofrecemos un amplio catalogo de carillas para todo uso bla bka bla bla bla bla bla bal" icon="/images/carillas-dentales.webp" />
-    <CardService className="col-span-2" title="Implante Dental" />
-    <CardService className="col-span-2" title="Implante Dental" />
-    <CardService className="col-span-2" title="Implante Dental" />
+    {
+      services.map((service) => (
+        <CardService
+          className={service.className}
+          title={service.title}
+          description={service.description}
+          icon={service.icon}
+          imgWidth={service.imgWidth}
+          special={service.special}
+        />
+      ))
+    }
   </div>
 </section>
