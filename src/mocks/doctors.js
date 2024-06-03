@@ -1,17 +1,20 @@
 export const doctors = [
   {
     id: 1,
-    name: 'Dra. Mariana I. Argaez',
-    imgSrc: '/images/doctora.webp'
+    name: 'Dra. Mariana Argaez',
+    imgSrc: '/images/doctora.webp',
+    specialty: ''
   },
   {
     id: 2,
-    name: 'Dr. Louis D. Jasso',
-    imgSrc: '/images/louis.webp'
+    name: 'Dr. Louis Jasso',
+    imgSrc: '/images/louis.webp',
+    specialty: ''
   },
   {
     id: 3,
-    name: 'Dr. John Doe',
-    imgSrc: '/images/doctor.webp'
+    name: 'Dr. Jhon',
+    imgSrc: '/images/doctor.webp',
+    specialty: ''
   }
 ]
