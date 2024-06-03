@@ -7,7 +7,7 @@ export const doctors = [
   {
     id: 2,
     name: 'Dr. Louis D. Jasso',
-    imgSrc: '/images/doctor.webp'
+    imgSrc: '/images/louis.webp'
   },
   {
     id: 3,
