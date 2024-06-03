@@ -1,0 +1,13 @@
+---
+import Phone from "./icons/Phone.astro";
+import WhatsApp from "./icons/WhatsApp.astro";
+---
+
+<div class="fixed bottom-8 right-8 flex flex-col gap-4">
+  <a href="tel:5575069386" class="p-4 border-2 rounded-[19px] group border-slate-800 bg-yellow-500" target="_blank" rel="noopener noreferrer">
+    <Phone class="w-8 transition group-hover:scale-110" />
+  </a>
+  <a href="https://api.whatsapp.com/send?phone=525575069386" class="p-4 border-2 rounded-[19px] group border-slate-800 bg-[#25D366]" target="_blank" rel="noopener noreferrer">
+    <WhatsApp class="w-8 transition group-hover:scale-110" />
+  </a>
+</div>
