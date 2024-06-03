@@ -12,7 +12,7 @@ const { title, description, icon, className, imgWidth, special } = Astro.props
 ---
 
 <a
-  title={`Agendar mi cita para iniciar mi tratamiento de ${title}`}
+  title={special === 'true' ? 'Agendar mi cita para iniciar mi tratamiento de ' : `Agendar mi cita para iniciar mi tratamiento de ${title}`}
   href={special === 'true' ? 'https://api.whatsapp.com/send?phone=525575069386&text=Solicito información sobre el tratamiento de ' : `https://api.whatsapp.com/send?phone=525575069386&text=Solicito información sobre el tratamiento de ${title}`}
   target="_blank"
   rel="noopener noreferrer"
