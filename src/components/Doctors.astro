@@ -12,7 +12,7 @@ import { doctors } from "../mocks/doctors";
       >especialistas</span
     >
   </h2>
-  <p class="lg:text-lg">
+  <p class="w-full lg:text-lg">
     Todos nuestros especialistas han egresado de las mejores universidades del país y cuentan con un amplio currículo que los avala como los mejores en cada una de las áreas. Su experiencia y formación continua aseguran que recibas la atención más actualizada y de alta calidad.
   </p>
   <div class="w-full">
@@ -65,7 +65,8 @@ import { doctors } from "../mocks/doctors";
     perMove: 1,
     breakpoints: {
       1024: {
-        perPage: 3
+        perPage: 3,
+        width: '740px'
       }
     },
   }).mount({ Intersection });
