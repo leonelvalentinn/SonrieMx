@@ -1,0 +1,43 @@
+---
+import Star from "./icons/Star.astro";
+
+interface Props {
+  name: string
+  score: number
+  date: Date
+  text: string
+}
+
+const { name, text, score, date } = Astro.props
+---
+
+<article class="w-full h-max grid gap-4 p-3 rounded-[19px] bg-[#1d1d1d] text-white md:px-4 lg:px-6">
+  <header class="w-full flex justify-between items-center">
+    <span class="flex gap-2">
+      <div class="flex">
+        <Star class="w-4 fill-white" />
+        {
+          score >= 2 ? <Star class="w-4 fill-white" /> : <Star class="w-4" />
+        }
+        {
+          score >= 3 ? <Star class="w-4 fill-white" /> : <Star class="w-4" />
+        }
+        {
+          score >= 4 ? <Star class="w-4 fill-white" /> : <Star class="w-4" />
+        }
+        {
+          score === 5 ? <Star class="w-4 fill-white" /> : <Star class="w-4" />
+        }
+      </div>
+      <p class="font-semibold">5</p>
+    </span>
+    <small>Hace 2 semanas</small>
+  </header>
+  <div class="flex items-center gap-4">
+    <img src="/logo-google.webp" alt="Logo de Google" class="w-8 h-8 p-1 rounded-full bg-white">
+    <p>{name}</p>
+  </div>
+  <p>
+    {text}
+  </p>
+</article>

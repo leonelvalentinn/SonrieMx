@@ -1,0 +1,39 @@
+---
+import Star from '../components/icons/Star.astro';
+import "@splidejs/splide/css";
+import SliderReviews from './SliderReviews.astro';
+import Arrow from './icons/Arrow.astro';
+---
+
+<section
+  class="w-full flex justify-center items-center bg-yellow-500 my-10 md:my-20"
+  id="testimonios"
+>
+  <div class="w-full px-4 max-w-5xl grid place-content-center gap-5 pt-10 pb-20 text-slate-800 md:grid-cols-2 md:place-items-center md:justify-items-start">
+    <article class="w-full md:max-w-96">
+      <h3 class="text-4xl uppercase font-bold">Pacientes felices</h3>
+      <a title="Ir a ver todas las reseñas de Sonríe Mx" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/place/Clínica+Dental+Sonríe+Mx/@19.4077689,-99.168913,17.2z/data=!4m18!1m9!3m8!1s0x85d1ff9dbc152c2f:0xa9caf22d74e5ce2c!2sClínica+Dental+Sonríe+Mx!8m2!3d19.4067!4d-99.1677788!9m1!1b1!16s%2Fg%2F11h5rfd71j!3m7!1s0x85d1ff9dbc152c2f:0xa9caf22d74e5ce2c!8m2!3d19.4067!4d-99.1677788!9m1!1b1!16s%2Fg%2F11h5rfd71j?hl=es-419&entry=ttu" class="relative w-full flex items-center my-5 gap-4">
+        <img src="/logo-google.webp" alt="Logo de Google" class="w-10 h-10 p-2 rounded-full bg-white">
+        <div>
+          <p class="font-semibold">Calificación global</p>
+          <span class="flex gap-2">
+            <p class="font-semibold">4.9</p>
+            <span class="flex">
+              {
+                Array.from({ length: 5 }).map((_) => (
+                  <Star class="w-5 fill-[#1d1d1d]" />
+                ))
+              }
+            </span>
+            <p class="font-semibold">(116)</p>
+          </span>
+        </div>
+      </a>
+      <a class="flex w-max h-fit text-white items-center gap-2 px-4 py-3 rounded-full bg-[#1d1d1d] group transition hover:scale-105" href="https://g.page/r/CSzO5XQt8sqpEBM/review" target="_blank" rel="noopener noreferrer">
+        Escribe una reseña
+        <Arrow class="w-5 -rotate-45 transition group-hover:rotate-0" />
+      </a>
+    </article>
+    <SliderReviews />
+  </div>
+</section>
