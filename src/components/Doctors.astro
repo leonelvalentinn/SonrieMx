@@ -18,14 +18,14 @@ import { doctors } from "../mocks/doctors";
   <div class="w-full grid place-content-center">
     <section
       id="image-carousel"
-      class="splide flex flex-col items-center w-72 xxs:w-80 xs:w-96 md:w-[750px] lg:w-full"
+      class="splide w-72 xxs:w-80 xs:w-96 md:w-[750px] lg:w-full"
       aria-label="Beautiful Images"
     >
-      <div class="splide__track w-full">
-        <ul class="splide__list w-full">
+      <div class="splide__track">
+        <ul class="splide__list">
           {
             doctors.map((doctor) => (
-            <li class="splide__slide w-full pr-2 group">
+            <li class="splide__slide pr-2 group">
               <CardDoctor
                 name={doctor.name}
                 imgSrc={doctor.imgSrc}
@@ -37,17 +37,19 @@ import { doctors } from "../mocks/doctors";
           }
         </ul>
       </div>
-      <div class="splide__arrows w-36 translate-y-10">
-        <button
-          class="splide__arrow--prev items-center bg-transparent rounded-full cursor-pointer flex h-8 justify-center p-0 absolute top-1/2 -translate-y-1/2 w-8 z-[1] border border-yellow-500 transition hover:bg-yellow-500"
-        >
-          <Next class="w-8 h-8 rotate-90" />
-        </button>
-        <button
-          class="splide__arrow--next items-center bg-transparent rounded-full cursor-pointer flex h-8 justify-center p-0 absolute top-1/2 -translate-y-1/2 w-8 z-[1] border border-yellow-500 transition hover:bg-yellow-500"
-        >
-          <Next class="w-8 h-8" />
-        </button>
+      <div class="w-full flex justify-center items-center">
+        <div class="splide__arrows w-36 translate-y-10">
+          <button
+            class="splide__arrow--prev items-center bg-transparent rounded-full cursor-pointer flex h-8 justify-center p-0 absolute top-1/2 -translate-y-1/2 w-8 z-[1] border border-yellow-500 transition hover:bg-yellow-500"
+          >
+            <Next class="w-8 h-8 rotate-90" />
+          </button>
+          <button
+            class="splide__arrow--next items-center bg-transparent rounded-full cursor-pointer flex h-8 justify-center p-0 absolute top-1/2 -translate-y-1/2 w-8 z-[1] border border-yellow-500 transition hover:bg-yellow-500"
+          >
+            <Next class="w-8 h-8" />
+          </button>
+        </div>
       </div>
     </section>
   </div>
