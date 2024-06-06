@@ -1,19 +1,31 @@
 ---
 import ButtonArrow from "./ButtonArrow.astro";
+import Facebook from "./icons/Facebook.astro";
+import Instagram from "./icons/Instagram.astro";
 ---
 
-<section class="px-4 w-full grid max-w-6xl gap-4 mb-10 mt-5 grid-cols-2 lg:gap-x-4 lg:gap-y-10">
-  <h1 class="text-5xl uppercase tracking-wide font-medium font-[Ondo] lg:text-7xl"><span class="pt-1 bg-gradient-to-r from-amber-200 to-yellow-500 bg-clip-text fill-transparent text-gold">Sonríe</span> con nosotros</h1>
+<section class="px-4 w-full grid max-w-6xl gap-4 mb-10 mt-5 md:grid-cols-2 lg:gap-x-4 lg:gap-y-10">
+  <div class="w-full">
+    <h1 class="text-5xl uppercase tracking-wide font-medium font-[Ondo] h-max lg:text-7xl"><span class="pt-1 bg-gradient-to-r from-amber-200 to-yellow-500 bg-clip-text fill-transparent text-gold">Sonríe</span> con nosotros</h1>
+    <div class="flex w-max h-max gap-4 mt-2">
+      <a aria-label="Ir a la página de Facebook de Sonríe Mx" href="https://www.facebook.com/clinicasonriemx/" target="_blank" rel="noopener noreferrer" class="group w-max bg-white rounded-full p-2">
+        <Facebook class="w-8 h-8 fill-[#1d1d1d] transition group-hover:fill-yellow-500" />
+      </a>
+      <a aria-label="Ir a la página de Instagram de Sonríe Mx" href="https://www.instagram.com/sonriemx_/?hl=es-la" target="_blank" rel="noopener noreferrer" class="group w-max bg-white rounded-full p-2">
+        <Instagram class="w-8 h-8 fill-[#1d1d1d] transition group-hover:fill-yellow-500" />
+      </a>
+    </div>
+  </div>
   <div class="grid gap-2">
     <p class="lg:text-lg">Permítenos ser tus aliados en el cuidado de tu salud bucal y la de tus seres queridos. Ven a conocernos y descubre por qué nuestra pasión por la odontología se refleja en cada sonrisa que atendemos. Estamos comprometidos a ofrecerte un servicio personalizado y de calidad, adaptado a las necesidades de cada miembro de tu familia.</p>
-    <ButtonArrow content="Agenda tu cita" />
+    <ButtonArrow content="Agenda tu cita aquí" />
   </div>
   <div class="relative lg:flex lg:justify-end lg:items-end">
     <img src="/images/hero-1.webp" alt="Paciente realizandose un blanqueamiento dental" class="rounded-[19px] aspect-[14/9] object-cover lg:max-h-72" width="1920" height="1280">
     <span class="absolute bottom-0 w-full py-2 rounded-b-[19px] bg-yellow-500/70 text-black font-semibold mask-image pl-4">Consigue la sonrísa que siempre soñaste</span>
   </div>
   <div class="relative">
-    <img src="/images/hero-2.webp" alt="Persona cepillandose los dientes" class="rounded-[19px] aspect-[14/9] object-cover lg:max-h-[340px]" width="1920" height="1280">
+    <img src="/images/hero-2.webp" alt="Persona cepillandose los dientes" class="rounded-[19px] aspect-[14/9] object-cover lg:max-h-80" width="1920" height="1280">
     <span class="absolute bottom-0 w-full py-2 rounded-b-[19px] bg-yellow-500/70 text-black font-semibold mask-image pl-4">Sonríe como nunca antes</span>
   </div>
 </section>

@@ -1,12 +1,14 @@
 ---
 import CardService from "./CardService.astro";
 import { services } from "../mocks/services";
+import Arrow from "./icons/Arrow.astro";
 ---
 
 <section class="w-full grid gap-4 place-content-center max-w-7xl px-4 my-10" id="servicios">
   <h2 class="text-4xl uppercase lg:text-6xl font-[Ondo]">Nuestros 
-    <span class="bg-gradient-to-r from-amber-200 to-yellow-500 bg-clip-text fill-transparent text-gold">servicios</span></h2>
-  <div class="w-full gap-4 grid place-content-center grid-cols-6">
+    <span class="bg-gradient-to-r from-amber-200 to-yellow-500 bg-clip-text fill-transparent text-gold">servicios</span>
+  </h2>
+  <div class="w-full max-h-[1000px] overflow-hidden gap-4 grid transition-all duration-500 md:grid-cols-6" id="container-services">
     {
       services.map((service) => (
         <CardService
@@ -20,4 +22,34 @@ import { services } from "../mocks/services";
       ))
     }
   </div>
+  <button class="flex w-max h-fit text-black items-center gap-2 font-bold px-4 py-3 rounded-full bg-yellow-500 group transition hover:scale-105 md:hidden" id="btn-more">
+    Ver más
+    <Arrow class="w-5 transition group-hover:rotate-90" />
+  </button>
 </section>
+
+<script>
+  const $container = document.getElementById('container-services')
+  const $btnMore = document.getElementById('btn-more')
+  const classes = ['w-5 transition group-hover:rotate-90', 'w-5 transition group-hover:-rotate-90']
+
+  $btnMore?.addEventListener('click', () => {
+    $container?.classList.toggle('max-h-[3000px]')
+    
+    if ($btnMore.innerText === 'Ver más') {
+      $btnMore.innerHTML = `Ver menos <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-right ${classes[1]}">
+                              <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                              <path d="M5 12l14 0" />
+                              <path d="M13 18l6 -6" />
+                              <path d="M13 6l6 6" />
+                            </svg>  `
+    } else {
+      $btnMore.innerHTML = `Ver más <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-right ${classes[0]}">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                  <path d="M5 12l14 0" />
+                  <path d="M13 18l6 -6" />
+                  <path d="M13 6l6 6" />
+                </svg>`
+    }
+  })
+</script>
