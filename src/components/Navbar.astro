@@ -19,7 +19,7 @@ import TikTok from "./icons/TikTok.astro"
         class=`w-11/12 h-svh bg-[#1d1d1d]/[0.99] absolute top-0 right-0 flex flex-col justify-center items-start gap-6 pt-14 px-6 pb-6 
               lg:w-full lg:relative lg:h-auto lg:bg-transparent lg:flex-row lg:px-0 lg:pb-0 lg:pt-0 lg:justify-end`
       >
-        <button class="absolute top-10 right-10 group lg:hidden">
+        <button class="absolute top-10 right-10 group lg:hidden" aria-label="Cerrar menu desplegable">
           <Close class="w-8 transition group-hover:text-red-500" />
         </button>
         <a href="/" class=" font-light text-2xl tracking-wider group">Inicio
@@ -38,13 +38,13 @@ import TikTok from "./icons/TikTok.astro"
           <div class="w-0 h-[2px] rounded-full bg-white transition-all group-hover:w-full" />
         </a>
         <div class="flex gap-4 lg:hidden">
-          <a href="https://www.facebook.com/clinicasonriemx/" target="_blank" rel="noopener noreferrer">
+          <a aria-label="Ir a la página de Facebook de Sonríe Mx" href="https://www.facebook.com/clinicasonriemx/" target="_blank" rel="noopener noreferrer">
             <Facebook class="w-8 fill-white" />
           </a>
-          <a href="https://www.instagram.com/sonriemx_/?hl=es-la" target="_blank" rel="noopener noreferrer">
+          <a aria-label="Ir a la página de Instagram de Sonríe Mx" href="https://www.instagram.com/sonriemx_/?hl=es-la" target="_blank" rel="noopener noreferrer">
             <Instagram class="w-8 fill-white" />
           </a>
-          <a href="https://www.tiktok.com/@sonriemx" target="_blank" rel="noopener noreferrer" class="grid place-content-center">
+          <a aria-label="Ir a la página de TikTok de Sonríe Mx" href="https://www.tiktok.com/@sonriemx" target="_blank" rel="noopener noreferrer" class="grid place-content-center">
             <TikTok class="w-8 text-white" />
           </a>
         </div>
