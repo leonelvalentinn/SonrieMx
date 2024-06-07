@@ -14,11 +14,11 @@ import '@splidejs/splide/css';
             <ul class="splide__list grid place-items-center">
               {
                 reviews.map((review, i) => (
-                <li class="splide__slide lg:pl-3" aria-roledescription="">
+                <li class="splide__slide lg:pl-3" aria-roledescription="Reviews Slider">
                   <CardReview
                     name={review.name}
                     text={review.text}
-                    score={review.score}
+                    score={review.star}
                     date={review.date}
                   />
                 </li>

@@ -4,8 +4,8 @@ import Star from "./icons/Star.astro";
 interface Props {
   name: string
   score: number
-  date: Date
-  text: string
+  date: string
+  text?: string
 }
 
 const { name, text, score, date } = Astro.props
@@ -31,7 +31,7 @@ const { name, text, score, date } = Astro.props
       </div>
       <p class="font-semibold">5</p>
     </span>
-    <small>Hace 2 semanas</small>
+    <small>{date}</small>
   </header>
   <div class="flex items-center gap-4">
     <img src="/logo-google.webp" alt="Logo de Google" class="w-8 h-8 p-1 rounded-full bg-white">
